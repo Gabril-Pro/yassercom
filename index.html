@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark" data-lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ياسر كوم | خدمات ستارلينك وفيزا وماستر كارد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-satellite"></i></div>
+                <span class="logo-text">ياسر <span>كوم</span></span>
+            </a>
+
+            <!-- NAV CONTROLS: theme + lang + hamburger -->
+            <div class="nav-controls">
+                <!-- Language Switcher -->
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn active" data-lang="ar">ع</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+                <!-- Dark/Light Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <!-- Hamburger -->
+                <button class="hamburger" id="hamburger" aria-label="قائمة">
+                    <i class="fas fa-bars" id="hamburgerIcon"></i>
+                </button>
+            </div>
+
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
+                <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
+                <li><a href="#payments" data-i18n="nav_payments">مواقع الدفع</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
+                <li><a href="#contact" class="nav-cta" data-i18n="nav_start">ابدأ الآن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <div class="orb orb3"></div>
+            <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.04" xmlns="http://www.w3.org/2000/svg">
+                <defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#fff" stroke-width="0.5"/>
+                </pattern></defs>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-circle" style="font-size:0.5rem;color:#22C55E"></i> <span data-i18n="hero_badge">خدمات رقمية ومالية متكاملة في السودان</span></div>
+            <h1><span class="grad">ياسر كوم</span><br><span data-i18n="hero_title">للخدمات الرقمية والتقنية</span></h1>
+            <p data-i18n="hero_desc">اشتراكات ستارلينك، فيزا وماستر كارد، تبديل العملات، استرجاع الحسابات، الدفع للمواقع العالمية، ودعم فني 24/7</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn btn-primary"><i class="fas fa-rocket"></i> <span data-i18n="hero_btn1">استكشف الخدمات</span></a>
+                <a href="#contact" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> <span data-i18n="hero_btn2">تواصل معنا</span></a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num" id="sUsers">0</span><span class="stat-lbl" data-i18n="stat_users">عميل نشط</span></div>
+                <div class="stat"><span class="stat-num" id="sSat">0</span><span class="stat-lbl" data-i18n="stat_sat">% رضا العملاء</span></div>
+                <div class="stat"><span class="stat-num">24</span><span class="stat-lbl" data-i18n="stat_support">/ 7 دعم فني</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-alt" id="services">
+        <div class="inner">
+            <div class="section-head">
+                <span class="section-tag" data-i18n="svc_tag">خدماتنا</span>
+                <h2 data-i18n="svc_title">ماذا نقدم لك؟</h2>
+                <div class="divider"></div>
+                <p data-i18n="svc_desc">حلول متكاملة تغطي احتياجاتك الرقمية والمالية بكل سهولة وأمان</p>
+            </div>
+            <div class="services-grid">
+                <div class="svc-card" data-svc="اشتراكات ستارلينك">
+                    <div class="svc-icon-wrap ic-blue"><i class="fas fa-satellite-dish"></i></div>
+                    <h3 data-i18n="svc1_title">اشتراكات ستارلينك</h3>
+                    <p data-i18n="svc1_desc">تفعيل وتجديد اشتراكات ستارلينك للأفراد والشركات بسرعة وأمان مع ضمان الاتصال الدائم.</p>
+                    <div class="svc-tags">
+                        <span class="tag" data-i18n="svc1_t1">تفعيل فوري</span>
+                        <span class="tag" data-i18n="svc1_t2">تجديد الاشتراك</span>
+                        <span class="tag" data-i18n="svc1_t3">دعم كامل</span>
+                    </div>
+                    <button class="svc-link" data-i18n="svc_order">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="svc-card" data-svc="فيزا وماستر كارد">
+                    <div class="svc-icon-wrap ic-cyan"><i class="fas fa-credit-card"></i></div>
+                    <h3 data-i18n="svc2_title">فيزا وماستر كارد</h3>
+                    <p data-i18n="svc2_desc">إصدار وشحن بطاقات فيزا وماستر كارد للدفع الدولي، مع خدمة تبديل العملات بأفضل الأسعار.</p>
+                    <div class="svc-tags">
+                        <span class="tag">Visa</span>
+                        <span class="tag">Mastercard</span>
+                        <span class="tag" data-i18n="svc2_t3">تبديل عملات</span>
+                    </div>
+                    <button class="svc-link" data-i18n="svc_order">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="svc-card" data-svc="استرجاع الحسابات الضائعة">
+                    <div class="svc-icon-wrap ic-purple"><i class="fas fa-user-shield"></i></div>
+                    <h3 data-i18n="svc3_title">استرجاع الحسابات</h3>
+                    <p data-i18n="svc3_desc">استعادة حساباتك الضائعة في منصات التواصل الاجتماعي والبريد الإلكتروني والتطبيقات المختلفة.</p>
+                    <div class="svc-tags">
+                        <span class="tag" data-i18n="svc3_t1">سوشيال ميديا</span>
+                        <span class="tag" data-i18n="svc3_t2">بريد إلكتروني</span>
+                        <span class="tag" data-i18n="svc3_t3">تطبيقات</span>
+                    </div>
+                    <button class="svc-link" data-i18n="svc_order">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="svc-card" data-svc="الدفع للمواقع العالمية">
+                    <div class="svc-icon-wrap ic-green"><i class="fas fa-globe-americas"></i></div>
+                    <h3 data-i18n="svc4_title">الدفع للمواقع العالمية</h3>
+                    <p data-i18n="svc4_desc">دفع آمن وسريع لكبرى المنصات العالمية: أمازون، شي ان، ChatGPT، علي بابا، كانفا، كورسيرا وغيرها.</p>
+                    <div class="svc-tags">
+                        <span class="tag">Amazon</span>
+                        <span class="tag">ChatGPT</span>
+                        <span class="tag">Coursera</span>
+                        <span class="tag">Canva</span>
+                    </div>
+                    <button class="svc-link" data-i18n="svc_order">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="svc-card" data-svc="الدعم الفني على مدار الساعة">
+                    <div class="svc-icon-wrap ic-orange"><i class="fas fa-headset"></i></div>
+                    <h3 data-i18n="svc5_title">الدعم الفني 24/7</h3>
+                    <p data-i18n="svc5_desc">فريق متخصص جاهز لمساعدتك في أي وقت وحل جميع مشكلاتك التقنية على مدار الساعة طوال الأسبوع.</p>
+                    <div class="svc-tags">
+                        <span class="tag" data-i18n="svc5_t1">24 ساعة</span>
+                        <span class="tag" data-i18n="svc5_t2">7 أيام</span>
+                        <span class="tag" data-i18n="svc5_t3">استجابة فورية</span>
+                    </div>
+                    <button class="svc-link" data-i18n="svc_contact">تواصل الآن <i class="fas fa-arrow-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAYMENTS SECTION -->
+    <section class="section" id="payments">
+        <div class="inner">
+            <div class="section-head">
+                <span class="section-tag" data-i18n="pay_tag">الدفع العالمي</span>
+                <h2 data-i18n="pay_title">نوصلك لكل المنصات العالمية</h2>
+                <div class="divider"></div>
+                <p data-i18n="pay_desc">ندفع نيابةً عنك لأكبر المواقع العالمية بسرعة وأمان</p>
+            </div>
+            <div class="pay-grid">
+                <div class="pay-item" onclick="openModal('الدفع لأمازون')">
+                    <div class="pay-logo">🛒</div><span>أمازون</span>
+                </div>
+                <div class="pay-item" onclick="openModal('الدفع لشي ان')">
+                    <div class="pay-logo">👗</div><span>شي ان</span>
+                </div>
+                <div class="pay-item" onclick="openModal('الاشتراك في ChatGPT')">
+                    <div class="pay-logo">🤖</div><span>ChatGPT</span>
+                </div>
+                <div class="pay-item" onclick="openModal('الدفع لعلي بابا')">
+                    <div class="pay-logo">🏪</div><span>علي بابا</span>
+                </div>
+                <div class="pay-item" onclick="openModal('الاشتراك في كانفا')">
+                    <div class="pay-logo">🎨</div><span>كانفا</span>
+                </div>
+                <div class="pay-item" onclick="openModal('الاشتراك في كورسيرا')">
+                    <div class="pay-logo">📚</div><span>كورسيرا</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section section-alt" id="why">
+        <div class="inner">
+            <div class="section-head">
+                <span class="section-tag" data-i18n="why_tag">لماذا ياسر كوم</span>
+                <h2 data-i18n="why_title">ثق بنا لأننا نستحق ثقتك</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">🔒</div>
+                    <h4 data-i18n="why1_title">أمان تام</h4>
+                    <p data-i18n="why1_desc">حماية كاملة لبياناتك ومعاملاتك المالية بأعلى معايير الأمان</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">⚡</div>
+                    <h4 data-i18n="why2_title">سرعة الإنجاز</h4>
+                    <p data-i18n="why2_desc">خدمات فورية بدون انتظار، نُنجز طلبك بأسرع وقت ممكن</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">🕐</div>
+                    <h4 data-i18n="why3_title">دعم 24 / 7</h4>
+                    <p data-i18n="why3_desc">فريقنا متاح على مدار الساعة طوال أيام الأسبوع لخدمتك</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">💎</div>
+                    <h4 data-i18n="why4_title">جودة مضمونة</h4>
+                    <p data-i18n="why4_desc">نضمن جودة خدماتنا أو نُعيد لك أموالك كاملةً دون قيد</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon">🌍</div>
+                    <h4 data-i18n="why5_title">وصول عالمي</h4>
+                    <p data-i18n="why5_desc">نوصلك لأي موقع أو خدمة عالمية بكل سهولة من السودان</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="inner">
+            <h2 data-i18n="cta_title">جاهز للبدء اليوم؟</h2>
+            <p data-i18n="cta_desc">تواصل معنا الآن واحصل على خدمة ياسر كوم بكل سرعة وسهولة</p>
+            <div class="cta-btns">
+                <a href="https://wa.me/249991140405" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> <span data-i18n="cta_wa">واتساب</span></a>
+                <a href="mailto:yasercom@outlook.sa" class="btn btn-ghost"><i class="fas fa-envelope"></i> <span data-i18n="cta_mail">راسلنا</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+        <div class="inner">
+            <div class="section-head">
+                <span class="section-tag" data-i18n="contact_tag">تواصل معنا</span>
+                <h2 data-i18n="contact_title">نحن هنا دائماً</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-grid">
+                <a href="https://wa.me/249991140405" target="_blank" class="contact-card">
+                    <div class="cc-icon cc-wa"><i class="fab fa-whatsapp"></i></div>
+                    <div class="cc-info">
+                        <h4 data-i18n="wa1_title">واتساب 1</h4>
+                        <p>+249 991 140 405</p>
+                        <p style="color:var(--accent);font-size:0.8rem;">🟢 <span data-i18n="available">متاح الآن</span></p>
+                    </div>
+                </a>
+                <a href="https://wa.me/249911178728" target="_blank" class="contact-card">
+                    <div class="cc-icon cc-wa2"><i class="fab fa-whatsapp"></i></div>
+                    <div class="cc-info">
+                        <h4 data-i18n="wa2_title">واتساب 2</h4>
+                        <p>+249 911 178 728</p>
+                        <p style="color:var(--accent);font-size:0.8rem;">🟢 <span data-i18n="available">متاح الآن</span></p>
+                    </div>
+                </a>
+                <a href="mailto:yasercom@outlook.sa" class="contact-card">
+                    <div class="cc-icon cc-mail"><i class="fas fa-envelope"></i></div>
+                    <div class="cc-info">
+                        <h4 data-i18n="mail_title">البريد الإلكتروني</h4>
+                        <p>yasercom@outlook.sa</p>
+                        <p style="color:var(--muted);font-size:0.8rem;" data-i18n="mail_reply">رد خلال ساعات</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="foot-brand">
+                <div class="logo" style="text-decoration:none;">
+                    <div class="logo-icon" style="width:36px;height:36px;font-size:0.95rem;"><i class="fas fa-satellite"></i></div>
+                    <span class="logo-text">ياسر <span>كوم</span></span>
+                </div>
+                <p data-i18n="footer_desc">خدمات تقنية ومالية متكاملة تخدم عملاءنا في السودان وخارجه.</p>
+            </div>
+            <div class="foot-col">
+                <h5 data-i18n="footer_quick">روابط سريعة</h5>
+                <ul>
+                    <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="#services" data-i18n="nav_services">الخدمات</a></li>
+                    <li><a href="#payments" data-i18n="nav_payments">مواقع الدفع</a></li>
+                </ul>
+            </div>
+            <div class="foot-col">
+                <h5 data-i18n="footer_svcs">خدماتنا</h5>
+                <ul>
+                    <li><a href="#" onclick="openModal('اشتراكات ستارلينك');return false;" data-i18n="svc1_title">ستارلينك</a></li>
+                    <li><a href="#" onclick="openModal('فيزا وماستر كارد');return false;" data-i18n="svc2_title">فيزا وماستر كارد</a></li>
+                    <li><a href="#" onclick="openModal('استرجاع الحسابات الضائعة');return false;" data-i18n="svc3_title">استرجاع الحسابات</a></li>
+                    <li><a href="#" onclick="openModal('الدعم الفني على مدار الساعة');return false;" data-i18n="svc5_title">الدعم الفني</a></li>
+                </ul>
+            </div>
+            <div class="foot-col">
+                <h5 data-i18n="footer_contact">اتصل بنا</h5>
+                <p><i class="fas fa-envelope" style="color:var(--accent)"></i> yasercom@outlook.sa</p>
+                <p><i class="fab fa-whatsapp" style="color:#25D366"></i> +249 991 140 405</p>
+                <p><i class="fab fa-whatsapp" style="color:#25D366"></i> +249 911 178 728</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_copy">© 2026 ياسر كوم – جميع الحقوق محفوظة &nbsp;|&nbsp; نحن لا نتبع لشركة ستارلينك</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-bg" id="modal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-icon" id="mIcon">📡</div>
+            <h3 data-i18n="modal_contact">تواصل معنا</h3>
+            <p class="modal-svc" id="mSvc"></p>
+            <div class="modal-btns">
+                <a href="https://wa.me/249991140405" target="_blank" class="m-btn m-btn-wa">
+                    <i class="fab fa-whatsapp"></i> واتساب — 0991 140 405
+                </a>
+                <a href="https://wa.me/249911178728" target="_blank" class="m-btn m-btn-wa">
+                    <i class="fab fa-whatsapp"></i> واتساب — 0911 178 728
+                </a>
+                <a href="mailto:yasercom@outlook.sa" class="m-btn m-btn-mail">
+                    <i class="fas fa-envelope"></i> <span data-i18n="modal_email">راسلنا عبر الإيميل</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BTT -->
+    <button id="btt" aria-label="العودة للأعلى">↑</button>
+
+    <!-- FLOATING CURRENCY CALCULATOR -->
+    <div class="float-calc-wrap" id="floatCalcWrap">
+        <!-- Trigger Button -->
+        <button class="float-calc-btn" id="floatCalcBtn" title="حاسبة العملات">
+            <i class="fas fa-coins"></i>
+            <span class="float-calc-label" data-i18n="calc_label">العملات</span>
+        </button>
+        <!-- Popup Panel -->
+        <div class="float-calc-panel" id="floatCalcPanel">
+            <div class="fcp-header">
+                <div class="fcp-title">
+                    <i class="fas fa-coins"></i>
+                    <span data-i18n="calc_title">حاسبة العملات</span>
+                </div>
+                <button class="fcp-close" id="floatCalcClose"><i class="fas fa-times"></i></button>
+            </div>
+            <!-- Live Rate Strip -->
+            <div class="fcp-rate-strip">
+                <span class="fcp-rate-live"><i class="fas fa-circle" style="color:#22C55E;font-size:0.4rem;vertical-align:middle"></i> <span data-i18n="calc_live">سعر مباشر</span></span>
+                <span class="fcp-rate-val">1 USD = <strong id="liveRate">-</strong> ج.س</span>
+            </div>
+            <div class="fcp-warning">
+                <i class="fas fa-triangle-exclamation"></i>
+                <span data-i18n="calc_warning">السعر تقريبي وقابل للتغيير، للاستفسار تواصل معنا</span>
+            </div>
+            <div class="fcp-body">
+                <div class="fcp-input-row">
+                    <div class="fcp-field">
+                        <label data-i18n="calc_amount">المبلغ</label>
+                        <input type="number" id="fcpAmt" value="1" min="0" step="any">
+                    </div>
+                    <div class="fcp-field">
+                        <label data-i18n="calc_currency">العملة</label>
+                        <select id="fcpCur">
+                            <option value="USD">🇺🇸 دولار أمريكي</option>
+                            <option value="SAR">🇸🇦 ريال سعودي</option>
+                            <option value="AED">🇦🇪 درهم إماراتي</option>
+                            <option value="KWD">🇰🇼 دينار كويتي</option>
+                            <option value="BHD">🇧🇭 دينار بحريني</option>
+                            <option value="OMR">🇴🇲 ريال عماني</option>
+                            <option value="QAR">🇶🇦 ريال قطري</option>
+                            <option value="EUR">🇪🇺 يورو</option>
+                            <option value="GBP">🇬🇧 جنيه إسترليني</option>
+                            <option value="TRY">🇹🇷 ليرة تركية</option>
+                            <option value="EGP">🇪🇬 جنيه مصري</option>
+                            <option value="CNY">🇨🇳 يوان صيني</option>
+                            <option value="INR">🇮🇳 روبية هندية</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="fcp-convert-btn" id="fcpBtn">
+                    <i class="fas fa-sync-alt"></i> <span data-i18n="calc_convert">تحويل</span>
+                </button>
+                <div class="fcp-result-box" id="fcpResultBox">
+                    <div class="fcp-result-num" id="fcpResult">—</div>
+                    <div class="fcp-result-eq" id="fcpEq">أدخل المبلغ</div>
+                </div>
+            </div>
+            <div class="fcp-footer-note" data-i18n="calc_note">
+                ⚠️ الأسعار تقريبية للإرشاد فقط — قابلة للتغيير في أي وقت
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
